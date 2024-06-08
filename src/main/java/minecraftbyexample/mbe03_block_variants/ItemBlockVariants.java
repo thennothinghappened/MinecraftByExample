@@ -31,9 +31,9 @@ public class ItemBlockVariants extends ItemBlock
 
   // create a unique unlocalised name for each colour, so that we can give each one a unique name
   @Override
-  public String getUnlocalizedName(ItemStack stack)
+  public String getTranslationKey(ItemStack stack)
   {
     BlockVariants.EnumColour colour = BlockVariants.EnumColour.byMetadata(stack.getMetadata());
-    return super.getUnlocalizedName() + "." + colour.toString();
+    return super.getTranslationKey() + "." + colour.toString();
   }
 }

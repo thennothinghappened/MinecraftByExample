@@ -132,13 +132,13 @@ public class BlockCamouflage extends Block {
 
     HashMap<IBlockState, Integer> adjacentBlockCount = new HashMap<IBlockState, Integer>();
     for (EnumFacing facing : EnumFacing.values()) {
-      BlockPos adjacentPosition = blockPos.add(facing.getFrontOffsetX(),
-                                               facing.getFrontOffsetY(),
-                                               facing.getFrontOffsetZ());
+      BlockPos adjacentPosition = blockPos.add(facing.getXOffset(),
+                                               facing.getYOffset(),
+                                               facing.getZOffset());
       IBlockState adjacentIBS = world.getBlockState(adjacentPosition);
       Block adjacentBlock = adjacentIBS.getBlock();
       if (adjacentBlock != Blocks.AIR
-          && adjacentBlock.getBlockLayer() == BlockRenderLayer.SOLID
+          && adjacentBlock.isFullBlock(adjacentIBS)
           && adjacentBlock.isOpaqueCube(adjacentIBS)) {
         adjacentSolidBlocks.put(facing, adjacentIBS);
         if (adjacentBlockCount.containsKey(adjacentIBS)) {

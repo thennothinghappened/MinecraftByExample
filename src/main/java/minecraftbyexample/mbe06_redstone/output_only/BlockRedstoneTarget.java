@@ -108,7 +108,7 @@ public class BlockRedstoneTarget extends Block
    * @param entityIn
    */
   @Override
-  public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
+  public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
   {
     EnumFacing targetFacing = (EnumFacing)state.getValue(PROPERTYFACING);
 
@@ -384,7 +384,7 @@ public class BlockRedstoneTarget extends Block
   @Override
   public IBlockState getStateFromMeta(int meta)
   {
-    EnumFacing facing = EnumFacing.getHorizontal(meta);
+    EnumFacing facing = EnumFacing.byHorizontalIndex(meta);
     return this.getDefaultState().withProperty(PROPERTYFACING, facing);
   }
 

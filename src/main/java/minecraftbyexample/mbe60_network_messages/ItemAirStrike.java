@@ -59,7 +59,7 @@ public class ItemAirStrike extends Item
     Vec3d playerFeetPosition = playerIn.getPositionEyes(PARTIAL_TICKS).subtract(0, playerIn.getEyeHeight(), 0);
     final double TARGET_DISTANCE = 6.0;
     final double HEIGHT_ABOVE_FEET = 0.1;
-    Vec3d targetPosition = playerFeetPosition.addVector(playerLook.x * TARGET_DISTANCE, HEIGHT_ABOVE_FEET,
+    Vec3d targetPosition = playerFeetPosition.add(playerLook.x * TARGET_DISTANCE, HEIGHT_ABOVE_FEET,
                                                        playerLook.z * TARGET_DISTANCE);
     callAirstrikeOnTarget(targetPosition);
     return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);

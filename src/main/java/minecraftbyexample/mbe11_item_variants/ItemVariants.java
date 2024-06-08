@@ -58,14 +58,14 @@ public class ItemVariants extends Item
   @Override
   // Make a unique name for each contents type (lime, orange, etc) so we can name them individually
   //  The fullness information is added separately in getItemStackDisplayName()
-  public String getUnlocalizedName(ItemStack stack)
+  public String getTranslationKey(ItemStack stack)
   {
     int metadata = stack.getMetadata();
     int contentsBits = metadata & 0x03;
     int fullnessBits = (metadata >> 2) & 0x07;
 
     EnumBottleContents contents = EnumBottleContents.byMetadata(contentsBits);
-    return super.getUnlocalizedName() + "." + contents.getName();
+    return super.getTranslationKey() + "." + contents.getName();
   }
 
   // what animation to use when the player holds the "use" button
@@ -116,7 +116,7 @@ public class ItemVariants extends Item
   @Override
   public String getItemStackDisplayName(ItemStack stack)
   {
-    String s = ("" + I18n.translateToLocal(this.getUnlocalizedName(stack) + ".name")).trim();  // this is depecrated, but I don't know what replaces it...
+    String s = ("" + I18n.translateToLocal(this.getTranslationKey(stack) + ".name")).trim();  // this is depecrated, but I don't know what replaces it...
     int metadata = stack.getMetadata();
     int fullnessBits = (metadata >> 2) & 0x07;
     EnumBottleFullness fullness = EnumBottleFullness.byMetadata(fullnessBits);

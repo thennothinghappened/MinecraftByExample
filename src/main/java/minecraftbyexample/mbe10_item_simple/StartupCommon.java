@@ -34,7 +34,7 @@ public class StartupCommon
     //  |  extinguished_candle  +       candle          |
     //  +-----------------------+-----------------------+
     //
-    itemSimple = (ItemSimple)(new ItemSimple().setUnlocalizedName("mbe10_item_simple_unlocalised_name"));
+    itemSimple = (ItemSimple)(new ItemSimple().setTranslationKey("mbe10_item_simple_unlocalised_name"));
     itemSimple.setRegistryName("mbe10_item_simple_registry_name");
     ForgeRegistries.ITEMS.register(itemSimple);
   }

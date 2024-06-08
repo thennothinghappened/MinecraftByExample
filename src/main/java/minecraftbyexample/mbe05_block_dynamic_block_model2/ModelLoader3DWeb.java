@@ -18,14 +18,14 @@ public class ModelLoader3DWeb implements ICustomModelLoader
   // return true if our Model Loader accepts this ModelResourceLocation
   @Override
   public boolean accepts(ResourceLocation resourceLocation) {
-    return resourceLocation.getResourceDomain().equals("minecraftbyexample")
-           && resourceLocation.getResourcePath().startsWith(SMART_MODEL_RESOURCE_LOCATION);
+    return resourceLocation.getNamespace().equals("minecraftbyexample")
+           && resourceLocation.getPath().startsWith(SMART_MODEL_RESOURCE_LOCATION);
   }
 
   // When called for our Block3DWeb's ModelResourceLocation, return our WebModel.
   @Override
   public IModel loadModel(ResourceLocation resourceLocation) {
-    String resourcePath = resourceLocation.getResourcePath();
+    String resourcePath = resourceLocation.getPath();
     if (!resourcePath.startsWith(SMART_MODEL_RESOURCE_LOCATION)) {
       assert false : "loadModel expected " + SMART_MODEL_RESOURCE_LOCATION + " but found " + resourcePath;
     }

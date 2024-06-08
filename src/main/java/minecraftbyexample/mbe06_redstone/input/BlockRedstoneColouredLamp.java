@@ -171,7 +171,7 @@ public class BlockRedstoneColouredLamp extends Block
   @Override
   public IBlockState getStateFromMeta(int meta)
   {
-    EnumFacing facing = EnumFacing.getHorizontal(meta);
+    EnumFacing facing = EnumFacing.byHorizontalIndex(meta);
     return this.getDefaultState().withProperty(PROPERTYFACING, facing);
   }
 

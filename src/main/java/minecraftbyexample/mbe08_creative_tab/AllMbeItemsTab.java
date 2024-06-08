@@ -21,7 +21,7 @@ public class AllMbeItemsTab extends CreativeTabs {
 
   @SideOnly(Side.CLIENT)
   @Override
-  public ItemStack getTabIconItem() {
+  public ItemStack createIcon() {
     return new ItemStack(Items.BOOK);
   }
 
@@ -31,7 +31,7 @@ public class AllMbeItemsTab extends CreativeTabs {
   {
     for (Item item : Item.REGISTRY) {
       if (item != null) {
-        if (item.getUnlocalizedName().contains(".mbe")) {
+        if (item.getTranslationKey().contains(".mbe")) {
           item.getSubItems(CreativeTabs.SEARCH, itemsToShowOnTab);  // CreativeTabs.SEARCH will find all items even if they belong to another tab
                                                                     //   except if the item has no tab (item.getCreativeTab() == NULL)
         }

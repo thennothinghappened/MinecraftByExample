@@ -41,7 +41,7 @@ public class StartupCommon
     // each instance of your block should have a name that is unique within your mod.  use lower case.
 
     blockRedstoneColouredLamp = (BlockRedstoneColouredLamp)(new BlockRedstoneColouredLamp()
-            .setUnlocalizedName("mbe06d_block_redstone_coloured_lamp_unlocalised_name"));
+            .setTranslationKey("mbe06d_block_redstone_coloured_lamp_unlocalised_name"));
     blockRedstoneColouredLamp.setRegistryName("minecraftbyexample:mbe06d_block_redstone_coloured_lamp_registry_name");
     ForgeRegistries.BLOCKS.register(blockRedstoneColouredLamp);
 
@@ -56,7 +56,7 @@ public class StartupCommon
     // -----input and output ---------
 
     blockRedstoneMeter = (BlockRedstoneMeter)(new BlockRedstoneMeter()
-            .setUnlocalizedName("mbe06c_block_redstone_meter_unlocalised_name"));
+            .setTranslationKey("mbe06c_block_redstone_meter_unlocalised_name"));
     blockRedstoneMeter.setRegistryName("minecraftbyexample:mbe06c_block_redstone_meter_registry_name");
     ForgeRegistries.BLOCKS.register(blockRedstoneMeter);
 
@@ -69,7 +69,7 @@ public class StartupCommon
     //-----------output_only---------
 
     blockRedstoneTarget = (BlockRedstoneTarget)(new BlockRedstoneTarget()
-            .setUnlocalizedName("mbe06b_block_redstone_target_unlocalised_name"));
+            .setTranslationKey("mbe06b_block_redstone_target_unlocalised_name"));
     blockRedstoneTarget.setRegistryName("minecraftbyexample:mbe06b_block_redstone_target_registry_name");
     ForgeRegistries.BLOCKS.register(blockRedstoneTarget);
 
@@ -78,7 +78,7 @@ public class StartupCommon
     ForgeRegistries.ITEMS.register(itemBlockRedstoneTarget);
 
     blockRedstoneVariableSource = (BlockRedstoneVariableSource)(new BlockRedstoneVariableSource()
-            .setUnlocalizedName("mbe06_block_redstone_variable_source_unlocalised_name"));
+            .setTranslationKey("mbe06_block_redstone_variable_source_unlocalised_name"));
     blockRedstoneVariableSource.setRegistryName("minecraftbyexample:mbe06_block_redstone_variable_source_registry_name");
     ForgeRegistries.BLOCKS.register(blockRedstoneVariableSource);
 

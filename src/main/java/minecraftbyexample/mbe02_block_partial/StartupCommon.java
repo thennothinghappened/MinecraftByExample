@@ -36,7 +36,7 @@ public class StartupCommon
     //  |  stationary_water  +       water          |
     //  +--------------------+----------------------+
     //
-    blockPartial = (BlockPartial)(new BlockPartial().setUnlocalizedName("mbe02_block_partial_unlocalised_name"));
+    blockPartial = (BlockPartial)(new BlockPartial().setTranslationKey("mbe02_block_partial_unlocalised_name"));
     blockPartial.setRegistryName("mbe02_block_partial_registry_name");
     ForgeRegistries.BLOCKS.register(blockPartial);
 

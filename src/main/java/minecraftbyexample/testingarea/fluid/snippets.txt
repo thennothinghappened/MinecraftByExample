@@ -18,7 +18,7 @@ public class GemBlock extends Block
 	{
 		super(Material.IRON);
 		this.gem = g;
-		setUnlocalizedName(gem + "_block");
+		setTranslationKey(gem + "_block");
 		setRegistryName(gem + "_block");
 		setCreativeTab(GemmaryTabs.Blocks);
 		setHardness(hardness);

@@ -23,7 +23,7 @@ public class StartupCommon
   public static void preInitCommon()
   {
     // each instance of your item should have a name that is unique within your mod.  use lower case.
-    itemTestRunner = (ItemTestRunner)(new ItemTestRunner().setUnlocalizedName("mbe75_test_runner_unlocalised_name"));
+    itemTestRunner = (ItemTestRunner)(new ItemTestRunner().setTranslationKey("mbe75_test_runner_unlocalised_name"));
     itemTestRunner.setRegistryName("mbe75_test_runner_registry_name");
     ForgeRegistries.ITEMS.register(itemTestRunner);
   }

@@ -133,7 +133,7 @@ The same process applies to any other IForgeRegistryEntry implementation (e.g. I
 
 ModelLoader.setCustomModelResourceLocation and ModelLoader.setCustomMeshDefinition take exactly the same arguments as the corresponding overloads of ItemModelMesher#register. The main difference is that they need to be called in preInit rather than init.
 
-Never use unlocalised names for anything other than translation purposes, there's no reason to use getUnlocalizedName().substring(5) anywhere in your code. The default model loaded for every Item is the one with its registry name (which is unrelated to the unlocalised name), so use the registry name for the default model location.
+Never use unlocalised names for anything other than translation purposes, there's no reason to use getTranslationKey().substring(5) anywhere in your code. The default model loaded for every Item is the one with its registry name (which is unrelated to the unlocalised name), so use the registry name for the default model location.
 
 If you want, you can set the unlocalised name to the full registry name so it includes your mod ID (avoiding conflicts with other mods).
 

@@ -40,7 +40,7 @@ public class StartupCommon
     //  |  stationary_water  +       water          |
     //  +--------------------+----------------------+
     //
-		blockInventoryAdvanced = new BlockInventoryFurnace().setUnlocalizedName("mbe31_block_inventory_furnace_unlocalised_name");
+		blockInventoryAdvanced = new BlockInventoryFurnace().setTranslationKey("mbe31_block_inventory_furnace_unlocalised_name");
     blockInventoryAdvanced.setRegistryName("mbe31_block_inventory_furnace_registry_name");
 		ForgeRegistries.BLOCKS.register(blockInventoryAdvanced);
 

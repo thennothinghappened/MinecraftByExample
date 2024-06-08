@@ -33,7 +33,7 @@ public class StartupCommon
     //  |  burning_candle       +       candle          |
     //  |  extinguished_candle  +       candle          |
     //  +-----------------------+-----------------------+
-    itemChessBoard = (ItemChessBoard)(new ItemChessBoard().setUnlocalizedName("mbe15_item_chessboard_unlocalised_name"));
+    itemChessBoard = (ItemChessBoard)(new ItemChessBoard().setTranslationKey("mbe15_item_chessboard_unlocalised_name"));
     itemChessBoard.setRegistryName("mbe15_item_chessboard_registry_name");
     ForgeRegistries.ITEMS.register(itemChessBoard);
   }

@@ -53,7 +53,7 @@ public class StartupCommon
     customTab = new CreativeTabs("mbe08_creative_tab") {
       @Override
       @SideOnly(Side.CLIENT)
-      public ItemStack getTabIconItem() {
+      public ItemStack createIcon() {
         return new ItemStack(Items.GOLD_NUGGET);
       }
     };
@@ -61,7 +61,7 @@ public class StartupCommon
 //  The lines below create a test block and item instance that are going to be added to the creative tabs.
 //  An item can be listed on multiple tabs by overriding Item.getCreativeTabs()
 //  A block can only be listed on one tab, unless you give it a custom ItemBlock which overrides .getCreativeTabs()
-    testBlock = new BlockHardenedClay().setUnlocalizedName("mbe08_creative_tab_block_unlocalised_name").setCreativeTab(customTab);
+    testBlock = new BlockHardenedClay().setTranslationKey("mbe08_creative_tab_block_unlocalised_name").setCreativeTab(customTab);
     testBlock.setRegistryName("mbe08_creative_tab_block_registry_name");
     ForgeRegistries.BLOCKS.register(testBlock);
     // register the itemblock corresponding to the block
@@ -70,7 +70,7 @@ public class StartupCommon
     ForgeRegistries.ITEMS.register(testItemBlock);
 
     // add an item (an item without a corresponding block)
-    testItem = new ItemSword(Item.ToolMaterial.GOLD).setUnlocalizedName("mbe08_creative_tab_item_unlocalised_name").setCreativeTab(customTab);
+    testItem = new ItemSword(Item.ToolMaterial.GOLD).setTranslationKey("mbe08_creative_tab_item_unlocalised_name").setCreativeTab(customTab);
     testItem.setRegistryName("mbe08_creative_tab_item_registry_name");
     ForgeRegistries.ITEMS.register(testItem);
 

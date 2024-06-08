@@ -34,7 +34,7 @@ public class StartupCommon
     // 2) an 'unlocalised name' that is used to retrieve the text name of your item in the player's language.  For example-
     //    the unlocalised name might be "water", which is printed on the user's screen as "Wasser" in German or
     //    "aqua" in Italian.
-    itemAirStrike = (ItemAirStrike)(new ItemAirStrike().setUnlocalizedName("mbe60_item_airstrike_unlocalised_name"));
+    itemAirStrike = (ItemAirStrike)(new ItemAirStrike().setTranslationKey("mbe60_item_airstrike_unlocalised_name"));
     itemAirStrike.setRegistryName("mbe60_item_airstrike_registry_name");
     ForgeRegistries.ITEMS.register(itemAirStrike);
 

@@ -24,7 +24,7 @@ public class StartupCommon
   public static void preInitCommon()
   {
     // each instance of your item should have a name that is unique within your mod.  use lower case.
-    itemHUDactivator = (ItemHUDactivator)(new ItemHUDactivator().setUnlocalizedName("mbe40_hud_overlay_item"));
+    itemHUDactivator = (ItemHUDactivator)(new ItemHUDactivator().setTranslationKey("mbe40_hud_overlay_item"));
     itemHUDactivator.setRegistryName("mbe40_hud_overlay_item");
     ForgeRegistries.ITEMS.register(itemHUDactivator);
   }

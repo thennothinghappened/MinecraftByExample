@@ -81,7 +81,7 @@ public class MessageHandlerOnServer implements IMessageHandler<AirstrikeMessageT
 //    as of build 1419 - see https://github.com/MinecraftForge/MinecraftForge/issues/1908
 
     int dimension = sendingPlayer.dimension;
-    MinecraftServer minecraftServer = sendingPlayer.mcServer;
+    MinecraftServer minecraftServer = sendingPlayer.server;
 
     for (EntityPlayerMP player : minecraftServer.getPlayerList().getPlayers()) {
       TargetEffectMessageToClient msg = new TargetEffectMessageToClient(message.getTargetCoordinates());   // must generate a fresh message for every player!
@@ -104,7 +104,7 @@ public class MessageHandlerOnServer implements IMessageHandler<AirstrikeMessageT
       double xOffset = (random.nextDouble() * 2 - 1) * MAX_HORIZONTAL_SPREAD;
       double zOffset = (random.nextDouble() * 2 - 1) * MAX_HORIZONTAL_SPREAD;
       double yOffset = RELEASE_HEIGHT_ABOVE_TARGET + (random.nextDouble() * 2 - 1) * MAX_VERTICAL_SPREAD;
-      Vec3d releasePoint = message.getTargetCoordinates().addVector(xOffset, yOffset, zOffset);
+      Vec3d releasePoint = message.getTargetCoordinates().add(xOffset, yOffset, zOffset);
       float yaw = random.nextFloat() * 360;
       float pitch = random.nextFloat() * 360;
 

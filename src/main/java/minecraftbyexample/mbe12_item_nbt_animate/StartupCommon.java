@@ -22,7 +22,7 @@ public class StartupCommon
 
   public static void preInitCommon() {
     // each instance of your item should have a name that is unique within your mod.  use lower case.
-    itemNBTAnimate = (ItemNBTAnimate) (new ItemNBTAnimate().setUnlocalizedName("mbe12_item_nbt_animate_unlocalised_name"));
+    itemNBTAnimate = (ItemNBTAnimate) (new ItemNBTAnimate().setTranslationKey("mbe12_item_nbt_animate_unlocalised_name"));
     itemNBTAnimate.setRegistryName("mbe12_item_nbt_animate_registry_name");
     ForgeRegistries.ITEMS.register(itemNBTAnimate);
   }

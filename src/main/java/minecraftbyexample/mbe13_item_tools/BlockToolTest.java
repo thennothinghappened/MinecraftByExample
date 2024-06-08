@@ -39,7 +39,7 @@ import java.util.List;
    Block.getDrops() - get a list of items that might drop when the block is harvested normally.
 
  * Of some use for special cases:
-   Block.onBlockDestroyedByPlayer() - used to drop extra items (eg skulls) or destroy other parts of a multiblock (eg bed)
+   Block.onPlayerDestroy() - used to drop extra items (eg skulls) or destroy other parts of a multiblock (eg bed)
    Block.harvestBlock() - can be used to override default harvesting behaviour (for example - shearing a tree to increase
      the sapling drop rate and trigger a special achievement)
    Block.createStackedBlock() - set the type of drop for silk enchantment harvesting.
@@ -88,11 +88,11 @@ public class BlockToolTest extends Block
 
   // Used in some special cases to drop extra items (eg skulls) or destroy other parts of a multiblock (eg bed)
   @Override
-  public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
-    StartupCommon.methodCallLogger.enterMethod("BlockToolTest.onBlockDestroyedByPlayer",
+  public void onPlayerDestroy(World worldIn, BlockPos pos, IBlockState state) {
+    StartupCommon.methodCallLogger.enterMethod("BlockToolTest.onPlayerDestroy",
             "{world}, " + pos + ", " + String.valueOf(state));
-    super.onBlockDestroyedByPlayer(worldIn, pos, state);
-    StartupCommon.methodCallLogger.exitMethod("BlockToolTest.onBlockDestroyedByPlayer", "");
+    super.onPlayerDestroy(worldIn, pos, state);
+    StartupCommon.methodCallLogger.exitMethod("BlockToolTest.onPlayerDestroy", "");
     return;
   }
 

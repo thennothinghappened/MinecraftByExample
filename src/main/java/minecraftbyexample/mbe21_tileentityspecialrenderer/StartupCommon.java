@@ -37,7 +37,7 @@ public class StartupCommon
     //  +--------------------+----------------------+
     //
 
-    blockMBE21 = (BlockMBE21)(new BlockMBE21().setUnlocalizedName("mbe21_tesr_block_unlocalised_name"));
+    blockMBE21 = (BlockMBE21)(new BlockMBE21().setTranslationKey("mbe21_tesr_block_unlocalised_name"));
     blockMBE21.setRegistryName("minecraftbyexample:mbe21_tesr_block_registry_name");
     ForgeRegistries.BLOCKS.register(blockMBE21);
 

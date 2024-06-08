@@ -34,7 +34,7 @@ public class StartupCommon
     //  |  extinguished_candle  +       candle          |
     //  +-----------------------+-----------------------+
     //
-    itemVariants = (ItemVariants)(new ItemVariants().setUnlocalizedName("mbe11_item_variants_unlocalised_name"));
+    itemVariants = (ItemVariants)(new ItemVariants().setTranslationKey("mbe11_item_variants_unlocalised_name"));
     itemVariants.setRegistryName("mbe11_item_variants_registry_name");
     ForgeRegistries.ITEMS.register(itemVariants);
  }

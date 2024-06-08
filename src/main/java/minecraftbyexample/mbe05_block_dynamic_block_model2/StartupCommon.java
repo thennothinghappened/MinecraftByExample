@@ -36,7 +36,7 @@ public class StartupCommon
     //  |  stationary_water  +       water          |
     //  +--------------------+----------------------+
     //
-    block3DWeb = (Block3DWeb)(new Block3DWeb().setUnlocalizedName("mbe05_block_3d_web_unlocalised_name"));
+    block3DWeb = (Block3DWeb)(new Block3DWeb().setTranslationKey("mbe05_block_3d_web_unlocalised_name"));
     block3DWeb.setRegistryName("mbe05_block_3d_web_registry_name");
     ForgeRegistries.BLOCKS.register(block3DWeb);
 

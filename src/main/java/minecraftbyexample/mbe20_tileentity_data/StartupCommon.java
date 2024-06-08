@@ -36,7 +36,7 @@ public class StartupCommon
     //  |  stationary_water  +       water          |
     //  +--------------------+----------------------+
     //
-    blockTileEntityData = (BlockTileEntityData)(new BlockTileEntityData().setUnlocalizedName("mbe20_tileentity_data_block_unlocalised_name"));
+    blockTileEntityData = (BlockTileEntityData)(new BlockTileEntityData().setTranslationKey("mbe20_tileentity_data_block_unlocalised_name"));
     blockTileEntityData.setRegistryName("minecraftbyexample:mbe20_tileentity_data_block_registry_name");
     ForgeRegistries.BLOCKS.register(blockTileEntityData);
 

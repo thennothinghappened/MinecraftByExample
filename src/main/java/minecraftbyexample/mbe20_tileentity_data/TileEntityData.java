@@ -217,7 +217,7 @@ public class TileEntityData extends TileEntity implements ITickable {
 		Block chosenBlock = blockChoices[random.nextInt(blockChoices.length)];
 	  world.setBlockState(this.pos, chosenBlock.getDefaultState());
 		if (chosenBlock == Blocks.TNT) {
-			Blocks.TNT.onBlockDestroyedByPlayer(world, pos, Blocks.TNT.getDefaultState().withProperty(BlockTNT.EXPLODE, true));
+			Blocks.TNT.onPlayerDestroy(world, pos, Blocks.TNT.getDefaultState().withProperty(BlockTNT.EXPLODE, true));
 			world.setBlockToAir(pos);
 		} else if (chosenBlock == Blocks.SAPLING) {
 			BlockSapling blockSapling = (BlockSapling)Blocks.SAPLING;

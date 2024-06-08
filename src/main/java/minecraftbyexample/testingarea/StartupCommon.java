@@ -34,16 +34,16 @@ public class StartupCommon
 //    itemArmorTickTest.setRegistryName("test_item_simple_registry_name");
 //    GameRegistry.register(itemArmorTickTest);
 
-//    block1 = (BlockSimple)(new BlockSimple().setUnlocalizedName("test_block1"));
-//    block2 = (BlockSimple)(new BlockSimple().setUnlocalizedName("test_block2"));
+//    block1 = (BlockSimple)(new BlockSimple().setTranslationKey("test_block1"));
+//    block2 = (BlockSimple)(new BlockSimple().setTranslationKey("test_block2"));
 //    GameRegistry.registerBlock(block2, "test_block2");
 //    GameRegistry.registerBlock(block1, "test_block1");
 
 //    // each instance of your block should have a name that is unique within your mod.  use lower case.
-//    blockTestTorch = (BlockTestTorch)(new BlockTestTorch().setUnlocalizedName("test_torch"));
+//    blockTestTorch = (BlockTestTorch)(new BlockTestTorch().setTranslationKey("test_torch"));
 //    GameRegistry.registerBlock(blockTestTorch, "test_torch");
 //
-//    blockTestNumberedPart = (BlockTestNumberedPart)(new BlockTestNumberedPart().setUnlocalizedName("test_numbered_part"));
+//    blockTestNumberedPart = (BlockTestNumberedPart)(new BlockTestNumberedPart().setTranslationKey("test_numbered_part"));
 //    GameRegistry.registerBlock(blockTestNumberedPart, "test_numbered_part");
 //
 //    MethodCallLogger.test();

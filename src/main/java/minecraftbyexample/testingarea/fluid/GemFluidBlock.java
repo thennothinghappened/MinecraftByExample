@@ -12,7 +12,7 @@
 //	{
 //		super(fluid, new MaterialGemLiquid(fluid.getMapColor()));
 //		setRegistryName("fluid" + StringUtils.capitalize(fluid.getName()));
-//		setUnlocalizedName("fluid." + fluid.getName());
+//		setTranslationKey("fluid." + fluid.getName());
 //	}
 //
 //	public GemFluid getGemFluid()

@@ -52,7 +52,7 @@ public class Block3DWeb extends Block {
 
   // make colliding players stick in the web like normal web
   @Override
-  public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
+  public void onEntityCollision(World worldIn, BlockPos pos, IBlockState state, Entity entityIn)
   {
     entityIn.setInWeb();
   }

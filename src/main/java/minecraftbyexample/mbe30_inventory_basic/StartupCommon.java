@@ -36,7 +36,7 @@ public class StartupCommon
 		 *          tile.minecraftbyexample:mbe_30_inventory_basic.name
 		 */
 		blockInventoryBasic = (BlockInventoryBasic)(new BlockInventoryBasic().setRegistryName("mbe30_inventory_basic"));
-		blockInventoryBasic.setUnlocalizedName("mbe30_inventory_basic");
+		blockInventoryBasic.setTranslationKey("mbe30_inventory_basic");
 		ForgeRegistries.BLOCKS.register(blockInventoryBasic);
 
 		// same but for the associated item

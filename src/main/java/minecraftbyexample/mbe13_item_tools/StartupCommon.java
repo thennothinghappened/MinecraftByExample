@@ -44,7 +44,7 @@ public class StartupCommon
 
     final float STONE_HARDNESS = 1.5F;
 
-    blockToolTest = (BlockToolTest)(new BlockToolTest(Material.ROCK)).setUnlocalizedName("mbe13_item_tools_block");
+    blockToolTest = (BlockToolTest)(new BlockToolTest(Material.ROCK)).setTranslationKey("mbe13_item_tools_block");
     blockToolTest.setHardness(STONE_HARDNESS); // can also set in the constructor if desired
     blockToolTest.setHarvestLevel("axe", STONE_HARVEST_LEVEL); // can also set in the constructor if desired
     blockToolTest.setRegistryName("mbe13_item_tools_block");
@@ -62,7 +62,7 @@ public class StartupCommon
     final Item.ToolMaterial TOOL_MATERIAL = Item.ToolMaterial.STONE;  // affects durability and digging speed
     final Set EFFECTIVE_ON = Sets.newHashSet(new Block[]{blockToolTest, Blocks.DIAMOND_BLOCK});   // set of blocks that tool is effective on,
                                                                                                   //   in addition to the ToolClass criteria
-    itemToolsTest = (ItemToolsTest)(new ItemToolsTest(ATTACK_DAMAGE, ATTACK_SPEED, TOOL_MATERIAL, EFFECTIVE_ON).setUnlocalizedName("mbe13_item_tools_item"));
+    itemToolsTest = (ItemToolsTest)(new ItemToolsTest(ATTACK_DAMAGE, ATTACK_SPEED, TOOL_MATERIAL, EFFECTIVE_ON).setTranslationKey("mbe13_item_tools_item"));
     itemToolsTest.setRegistryName("mbe13_item_tools_item");
     ForgeRegistries.ITEMS.register(itemToolsTest);
 
@@ -82,7 +82,7 @@ public class StartupCommon
 
     methodCallLogger.setShouldLog("Block.onBlockHarvested", true);
     methodCallLogger.setShouldLog("Block.getDrops", true);
-    methodCallLogger.setShouldLog("Block.onBlockDestroyedByPlayer", true);
+    methodCallLogger.setShouldLog("Block.onPlayerDestroy", true);
     methodCallLogger.setShouldLog("Block.harvestBlock", true);
     methodCallLogger.setShouldLog("Block.createStackedBlock", true);
     methodCallLogger.setShouldLog("Block.dropBlockAsItemWithChance", true);

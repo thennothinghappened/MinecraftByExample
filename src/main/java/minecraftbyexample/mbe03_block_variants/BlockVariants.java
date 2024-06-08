@@ -119,7 +119,7 @@ public class BlockVariants extends Block
   @Override
   public IBlockState getStateFromMeta(int meta)
   {
-    EnumFacing facing = EnumFacing.getHorizontal(meta);
+    EnumFacing facing = EnumFacing.byHorizontalIndex(meta);
     int colourbits = (meta & 0x0c) >> 2; // 0x0c is hexadecimal, in binary 1100 - the upper two bits, corresponding to the colour
     EnumColour colour = EnumColour.byMetadata(colourbits);
     return this.getDefaultState().withProperty(PROPERTYCOLOUR, colour).withProperty(PROPERTYFACING, facing);

@@ -36,7 +36,7 @@ public class StartupCommon
     //  |  stationary_water  +       water          |
     //  +--------------------+----------------------+
     //
-    blockCamouflage = (BlockCamouflage)(new BlockCamouflage().setUnlocalizedName("mbe04_block_camouflage_unlocalised_name"));
+    blockCamouflage = (BlockCamouflage)(new BlockCamouflage().setTranslationKey("mbe04_block_camouflage_unlocalised_name"));
     blockCamouflage.setRegistryName("mbe04_block_camouflage_registry_name");
     ForgeRegistries.BLOCKS.register(blockCamouflage);
 

@@ -25,7 +25,7 @@ public class StartupCommon
   public static void preInitCommon()
   {
     // each instance of your block should have a name that is unique within your mod.  use lower case.
-    blockFlameEmitter = (BlockFlameEmitter)(new BlockFlameEmitter().setUnlocalizedName("mbe50_block_flame_emitter_unlocalised_name"));
+    blockFlameEmitter = (BlockFlameEmitter)(new BlockFlameEmitter().setTranslationKey("mbe50_block_flame_emitter_unlocalised_name"));
     blockFlameEmitter.setRegistryName("mbe50_block_flame_emitter_registry_name");
     ForgeRegistries.BLOCKS.register(blockFlameEmitter);
 
